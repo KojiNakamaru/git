@@ -7,7 +7,7 @@
 
 begin_group "Install dependencies"
 
-P4WHENCE=https://cdist2.perforce.com/perforce/r23.2
+P4WHENCE=https://cdist2.perforce.com/perforce/r24.2
 LFSWHENCE=https://github.com/github/git-lfs/releases/download/v$LINUX_GIT_LFS_VERSION
 JGITWHENCE=https://repo1.maven.org/maven2/org/eclipse/jgit/org.eclipse.jgit.pgm/6.8.0.202311291450-r/org.eclipse.jgit.pgm-6.8.0.202311291450-r.sh
 CARGO_MSRV_VERSION=0.18.4
@@ -109,7 +109,7 @@ macos-*)
 	brew link --force gettext
 
 	mkdir -p "$CUSTOM_PATH"
-	wget -q "$P4WHENCE/bin.macosx1015x86_64/helix-core-server.tgz" &&
+	wget -q "$P4WHENCE/bin.macosx12arm64/helix-core-server.tgz" &&
 	tar -xf helix-core-server.tgz -C "$CUSTOM_PATH" p4 p4d &&
 	sudo xattr -d com.apple.quarantine "$CUSTOM_PATH/p4" "$CUSTOM_PATH/p4d" 2>/dev/null || true
 	rm helix-core-server.tgz
