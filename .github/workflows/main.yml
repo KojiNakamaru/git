@@ -323,10 +323,10 @@ jobs:
         vector:
           - jobname: osx-clang
             cc: clang
-            pool: macos-14
+            pool: macos-15
           - jobname: osx-reftable
             cc: clang
-            pool: macos-14
+            pool: macos-15
           - jobname: osx-gcc
             cc: gcc-13
             pool: macos-14
